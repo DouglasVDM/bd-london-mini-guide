@@ -3,6 +3,9 @@ const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 4000;
 
+const Stratford = require('./Stratford.json');
+
+// Route Descriptions
 app.get('/', (req, res) => {
   res.json(
     {
@@ -12,6 +15,11 @@ app.get('/', (req, res) => {
       "/hospitals":	"returns hospitals list for stratford"
     }
   )
+});
+
+// Route for Pharmacies
+app.get('/pharmacies', (req, res) => {
+  res.json(Stratford.pharmacies)
 });
 
 app.listen(PORT, () => {
