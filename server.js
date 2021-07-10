@@ -31,7 +31,7 @@ app.get('/doctors', (req, res) => {
 });
 
 app.get('/hospitals', (req, res) => {
-  res.send(Stratford.hospitals);
+  res.json(Stratford.hospitals);
 });
 
 app.listen(PORT, () => {
