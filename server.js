@@ -22,6 +22,18 @@ app.get('/pharmacies', (req, res) => {
   res.json(Stratford.pharmacies)
 });
 
+app.get('/colleges', (req, res) => {
+  res.json(Stratford.colleges);
+});
+
+app.get('/doctors', (req, res) => {
+  res.json(Stratford.doctors);
+});
+
+app.get('/hospitals', (req, res) => {
+  res.send(Stratford.hospitals);
+});
+
 app.listen(PORT, () => {
   console.log(`Server started on port: ${PORT}`)
 });
