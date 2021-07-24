@@ -1,23 +1,11 @@
+Return data based on any city that is passed to the server.
+
+Routes will change:
 ### Use Route 
 
-- /pharmacies
-
-to return a list of **pharmacies** for *city*
-<br>
-<br>
-
-- /colleges
-
- to return a list of **colleges** list for *city*
-<br>
-<br>
-
-- /doctors	
-
-to return a list of **doctors** for *city*
-<br>
-<br>
-
-- /hospitals
-
-to return a list of **hospitals** list for *city*
+|       route       |              result               |
+| :---------------: | :-------------------------------: |
+| /:city/pharmacies | returns pharmacies list for :city |
+|  /:city/colleges  |  returns colleges list for :city  |
+|  /:city/doctors   |  returns doctors list for :city   |
+| /:city /hospitals | returns hospitals list for :city  |
