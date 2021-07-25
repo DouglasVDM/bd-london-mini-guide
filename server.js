@@ -17,7 +17,8 @@ const cities = [
 
 // List of All the Cities in an Array
 app.get('/cities', (req, res) => {
-  const cityNames = Object.values(cities);
+  // const cityNames = Object.values(cities);
+  const cityNames = cities.map(city => city.name);
   res.json(cityNames);
 });
   
