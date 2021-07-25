@@ -15,9 +15,22 @@ const cities = [
   { name: "Stratford", data: Stratford },
 ];
 
+// Route Descriptions
+app.get('/', (req, res) => {
+  res.json(
+    {
+      "Route": "Value of route",
+      "/cities": "returns all cities as an array",
+      "/:city/pharmacies": "returns pharmacies list for city",
+      "/:city/colleges": "returns colleges list for city",
+      "/:city/doctors": "returns doctors list for city",
+      "/:city/hospitals": "returns hospitals list for city",
+    }
+  )
+});
+
 // List of All the Cities in an Array
 app.get('/cities', (req, res) => {
-  // const cityNames = Object.values(cities);
   const cityNames = cities.map(city => city.name);
   res.json(cityNames);
 });
