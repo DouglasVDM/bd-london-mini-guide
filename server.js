@@ -45,7 +45,8 @@ app.get('/cities', (req, res) => {
   
 // Get All Pharmacies for the City
 app.get('/:city/:category', (req, res) => {
-  const { city, category } = req.params;
+  const city = req.params.city.toLowerCase();
+  const category = req.params.category.toLowerCase();
   
   // Selected City Validation
   if (!cities[city]) {
